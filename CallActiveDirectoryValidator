@@ -1,0 +1,10 @@
+ActiveDirectoryValidator activeDirectoryValidator = new ActiveDirectoryValidator(ActivDir_1);
+bool bln_adAuth_1 = activeDirectoryValidator.IsAuthenticated(ActiveDirectoryDN, Empcode, Password);
+if (true == bln_adAuth_1)
+{
+	clsDirectReturn.SaveExecutionLogger("AccountController", "Login-httpPost", "AD Worked", "User present in AD");
+}
+else
+{
+	clsDirectReturn.SaveExecutionLogger("AccountController", "Login-httpPost", "AD Not Worked", "User not present in AD");
+}
